@@ -22,13 +22,13 @@ class Blocktwittercycle extends Module
 	
 	public function install()
 	{
-	 	if (!parent::install() OR !$this->registerHook('rightColumn' ) || !Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_VAR', 'prestashop') || !Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_TIMEOUT', '5000') )
+	 	if (!parent::install() OR !$this->registerHook('rightColumn' ) || !Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_VAR', 'prestashop') || !Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_TIMEOUT', '5000') || !Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_DATE', 'true') )
 	 		return false;
 	}
 	
 	public function uninstall()
 	{
-	 	if (!parent::uninstall() || !Configuration::deleteByName('MOD_BLOCKTWITTERCYCLE_VAR') || !Configuration::deleteByName('MOD_BLOCKTWITTERCYCLE_TIMEOUT') )
+	 	if (!parent::uninstall() || !Configuration::deleteByName('MOD_BLOCKTWITTERCYCLE_VAR') || !Configuration::deleteByName('MOD_BLOCKTWITTERCYCLE_TIMEOUT') || !Configuration::deleteByName('MOD_BLOCKTWITTERCYCLE_DATE') )
 	 		return false;
 	}
 	
@@ -37,6 +37,7 @@ class Blocktwittercycle extends Module
 	 	global $cookie, $smarty;
 	 	$smarty->assign('TWITTERCYCLE_TIMEOUT', Configuration::get('MOD_BLOCKTWITTERCYCLE_TIMEOUT'));
 	 	$smarty->assign('TWITTERCYCLE_VAR', Configuration::get('MOD_BLOCKTWITTERCYCLE_VAR'));
+	 	$smarty->assign('TWITTERCYCLE_DATE', Configuration::get('MOD_BLOCKTWITTERCYCLE_DATE'));
 
 		
 		$smarty->assign(array(
@@ -61,11 +62,13 @@ class Blocktwittercycle extends Module
   {
       Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_VAR', Tools::getValue('TWITTERCYCLE_VAR'));
       Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_TIMEOUT', Tools::getValue('TWITTERCYCLE_TIMEOUT'));
+      Configuration::updateValue('MOD_BLOCKTWITTERCYCLE_DATE', Tools::getValue('TWITTERCYCLE_DATE'));
       $html .= $this->displayConfirmation($this->l('Settings updated.'));
   }
 
   $TWITTERCYCLE_VAR = Configuration::get('MOD_BLOCKTWITTERCYCLE_VAR');
   $TWITTERCYCLE_TIMEOUT = Configuration::get('MOD_BLOCKTWITTERCYCLE_TIMEOUT');
+  $TWITTERCYCLE_DATE = Configuration::get('MOD_BLOCKTWITTERCYCLE_DATE');
 
   $html .= '<h2 style="text-align:center">'.$this->l('Twitter Cycle').'</h2>
   <form action="'.$_SERVER['REQUEST_URI'].'" method="post">
@@ -93,6 +96,14 @@ class Blocktwittercycle extends Module
 			</td>
 			<td>
 <input style="text-align:center;" type="text" name="TWITTERCYCLE_TIMEOUT" value="'.$TWITTERCYCLE_TIMEOUT.'"/>
+			</td>
+		</tr>
+		<tr>
+			<td >
+'.$this->l('Afficher le timming (true : oui; false: non):').'
+			</td>
+			<td>
+<input style="text-align:center;" type="text" name="TWITTERCYCLE_DATE" value="'.$TWITTERCYCLE_DATE.'"/>
 			</td>
 		</tr>
 	</table>

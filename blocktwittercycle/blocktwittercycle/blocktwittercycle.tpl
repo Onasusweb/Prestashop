@@ -13,7 +13,7 @@ $(document).ready(function() {
 		titleLink: 'http://SiteProjet.com',
 		birdLink: 'http://SiteProjet.com',
 		pause:   true, 
-		time:    true, 
+		time:    {$TWITTERCYCLE_DATE}, 
 		timeout: {$TWITTERCYCLE_TIMEOUT},
 		css: { 
 			img: { width: '30px', height: '30px' } 
