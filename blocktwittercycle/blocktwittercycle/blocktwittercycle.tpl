@@ -14,7 +14,7 @@ $(document).ready(function() {
 		birdLink: 'http://SiteProjet.com',
 		pause:   true, 
 		time:    true, 
-		timeout: 2000,
+		timeout: {$TWITTERCYCLE_TIMEOUT},
 		css: { 
 			img: { width: '30px', height: '30px' } 
 		}

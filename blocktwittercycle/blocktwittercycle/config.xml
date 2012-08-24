@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <module>
+            <name>blocktwittercycle</name>
+            <displayName><![CDATA[Blocktwittercycle]]></displayName>
+            <version><![CDATA[0.4]]></version>
+            <description><![CDATA[Affiche un bloc avec vos derniers tweets]]></description>
+            <author><![CDATA[SiteProjet.com]]></author>
+            <tab><![CDATA[Custom Module]]></tab>
+	<confirmUninstall>Are you sure you want to uninstall blocktwittercycle ?</confirmUninstall>
+            <is_configurable>1</is_configurable>
+            <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+        </module>
