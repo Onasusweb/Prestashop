@@ -9,7 +9,7 @@ class Blocktwittercycle extends Module
 	{
 	 	$this->name = 'blocktwittercycle';
 	 	$this->tab = 'Custom Module';
-	 	$this->version = '0.4';
+	 	$this->version = '0.5';
 		$this->author = 'SiteProjet.com';
 		$this->need_instance = 0;
 
@@ -100,7 +100,7 @@ class Blocktwittercycle extends Module
 		</tr>
 		<tr>
 			<td >
-'.$this->l('Afficher le timming (true : oui; false: non):').'
+'.$this->l('Afficher le timing (true : oui; false: non):').'
 			</td>
 			<td>
 <input style="text-align:center;" type="text" name="TWITTERCYCLE_DATE" value="'.$TWITTERCYCLE_DATE.'"/>

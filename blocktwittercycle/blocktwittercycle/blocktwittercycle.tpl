@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" type="text/css" media="screen" href="{$modules_dir}/blocktwittercycle/css/jq.css" />
 <script type="text/javascript" src="{$modules_dir}/blocktwittercycle/js/jquery.corner.js"></script>
 <script type="text/javascript" src="{$modules_dir}/blocktwittercycle/js/jquery.twitter.search.js"></script>
