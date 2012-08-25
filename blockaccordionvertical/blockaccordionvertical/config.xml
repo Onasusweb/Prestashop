@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <module>
+            <name>blockaccordionvertical</name>
+            <displayName><![CDATA[Blockaccordionvertical]]></displayName>
+            <version><![CDATA[0.1]]></version>
+            <description><![CDATA[Images dans un block vertical en accord&eacute;on avec animations jquery.]]></description>
+            <author><![CDATA[SiteProjet.com]]></author>
+            <tab><![CDATA[Custom Module]]></tab>
+	<confirmUninstall>Are you sure you want to uninstall blockaccordionvertical ?</confirmUninstall>
+            <is_configurable>1</is_configurable>
+            <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+        </module>
